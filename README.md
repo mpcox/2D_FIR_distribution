@@ -12,9 +12,9 @@ The script also requires the installation of four R packages: GISTools (v0.7-4),
 
 INPUTS
 
-*2D_FIR_distribution* requires three input files: a GFF3 file of all genes in the genome ('all_gene_file' – the background gene set), a GFF3 file of the subset of genes being studied ('subset_gene_file' – the 'genes of interest' gene set), and a bedtools genome file that lists each chromosome/scaffold/contig and its size ('genome_sizes_file').  The genome file is straightforward and is explained [here](https://bedtools.readthedocs.io/en/latest/content/overview.html#what-is-a-genome-file).  Exemplar files are included in this GitHub distribution.
+*2D_FIR_distribution* requires three input files: a GFF3 file of all genes in the genome ('all_gene_file' – the background gene set), a GFF3 file of the subset of genes being studied ('subset_gene_file' – the genes-of-interest gene set), and a bedtools genome file that lists each chromosome/scaffold/contig and its size ('genome_sizes_file').  The genome file is straightforward and is explained [here](https://bedtools.readthedocs.io/en/latest/content/overview.html#what-is-a-genome-file).  Exemplar files are included in this GitHub distribution.
 
-The script also requires three global variables: a title for the plot (typically the set of genes being analyzed), the maximum intergenic distance to be used for plotting (which allows the exclusion of outliers, if desired), and the number of iterations to be used for the Monte Carlo simulations (typically 10^5^ to 10^6^).
+The script also requires three global variables: a title for the plot (typically the set of genes being analyzed), the maximum intergenic distance to be used for plotting (which allows the exclusion of outliers, if desired), and the number of iterations to be used for the Monte Carlo simulations (typically 10<sup>5</sup> to 10<sup>6</sup>).
 
 Exemplars for all these inputs are shown in the worked example below.
 
