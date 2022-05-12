@@ -20,6 +20,8 @@ The script also requires three global variables: a title for the plot (typically
 
 Exemplars for all these inputs are shown in the worked example below.
 
+If preferred, distances can be plotted on a log scale by pre-scaling distances with your desired log function (natural, log10 or log2).  An example of this is given in the R code.
+
 
 USAGE
 

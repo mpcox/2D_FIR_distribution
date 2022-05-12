@@ -168,7 +168,17 @@ upViewport()
 
 # can change this to a log scale, but it can look quite misleading
 # https://stackoverflow.com/questions/20651920/how-do-i-change-how-bins-are-assigned-in-hexbin-plot
+# for log scales, axis tick marks may need to be adjusted manually
 
+# hexbin plot settings
+bin <- hexbin(log10(d$prime3/1000), log10(d$prime5/1000), xbins=40)
+my_colors <- colorRampPalette(rev(add.alpha(brewer.pal(11,'Spectral'),0.5)), alpha=T)
+
+# hexbin plot
+p <- plot(bin, main=title, colramp=my_colors, legend=F, xlab="3ʹ Flanking Intergenic Distance (Kb)", ylab="5ʹ Flanking Intergenic Distance (Kb)") 
+pushHexport(p$plot.vp)
+grid.points(log10(s$prime3/1000), log10(s$prime5/1000), pch=21, size=unit(6, "pt"), gp=gpar(fill=s$color))
+upViewport()
 
 
 # monte carlo simulation (bootstrap without replacement)
